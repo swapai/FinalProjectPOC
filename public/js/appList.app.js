@@ -11,6 +11,26 @@ var listOfApps = new Vue({
         appNum:2,
         appName: "Name of second App",
         appDescription: "Description of the App"
+      },
+      {
+        appNum:3,
+        appName: "Name of third App",
+        appDescription: "Description of the App"
+      },
+      {
+        appNum:4,
+        appName: "Name of fourth App",
+        appDescription: "Description of the App"
+      },
+      {
+        appNum:5,
+        appName: "Name of fifth App",
+        appDescription: "Description of the App"
+      },
+      {
+        appNum:6,
+        appName: "Name of sixth App",
+        appDescription: "Description of the App"
       }
     ]
 },
@@ -18,7 +38,7 @@ var listOfApps = new Vue({
 
 methods: {
 gotoWebsiteNext() {
-   window.location = 'salesDashboard.html' + sid;
+   window.location = 'salesDashboard.html';
 }
 },
 
