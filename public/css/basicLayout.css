@@ -1,0 +1,211 @@
+
+#headerName{
+  text-align: center;
+  font-size: 40px;
+}
+
+@media (max-width: 640px)
+{
+    #headerName
+    {
+        display: none;
+    }
+}
+
+#headerSmallName{
+  text-align: center;
+  font-size: 40px;
+}
+
+@media (min-width: 640px)
+{
+    #headerSmallName
+    {
+        display: none;
+    }
+}
+
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, "sans-serif";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2.2;
+  color: #4d4d4d;
+  text-align: left;}
+
+
+  a {
+  color:#4d4d4d;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+
+
+
+h1, h2, h3, h4, h5 {
+  color:#4d4d4d;
+}
+
+.loginlabel {
+  color:#078e0f;
+  font-size: 20px;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+  height:100%;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-size:12px;
+}
+
+body {
+    background-color:#ececec;
+}
+
+#homebutton{
+  font-size:16pt;
+  color: white;
+  position: absolute;
+  right: 4px;
+  bottom: 7px;
+}
+
+#homebutton:hover {
+  background-color: grey;
+  border:none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: grey;
+  border:none;
+  cursor: pointer;
+}
+
+.pagetitle {
+  padding-left:15px;
+  padding-top: 25px;
+  margin-bottom:15px;
+}
+
+.btn-primary {
+    color:white;
+    background-color:#078e0f;
+    border-color: #078e0f;
+    font-size:18px;
+    margin:6px;
+    margin-right:12px;
+    margin-top:12px;
+}
+
+
+.container {
+  margin: 50px 0 0 100px;
+}
+
+
+.card{
+  margin:50px;
+  margin-top: 75px;
+  display:inline-block;
+  padding: 10px;
+  width: 25rem;
+  vertical-align: top;
+}
+
+.navBoxes{
+  margin : 1px;
+  padding : 10px;
+}
+
+.split {
+  height: 100%;
+  width: 56%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-image: url("images/turbine.jpg");
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.fill {
+  width:100%;
+height:100%;
+object-fit: cover;
+overflow: hidden;
+}
+
+input[type=text], select {
+     width: 100%;
+     padding: 12px 20px;
+     margin: 20px 0;
+     display: inline-block;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+ }
+
+ input[type=password], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 20px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+  }
+
+ input[type=submit] {
+     width: 100%;
+     background-color:black;
+     font-size:18px;
+     color: white;
+     padding: 3px 20px;
+     margin: 8px 0;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+
+ input[type=submit]:hover {
+     background-color: grey;
+ }
+
+ #logintitle {
+   font-size:60px;
+ }
+
+#unavailabledata {
+  color:red;
+  text-align:center;
+}
