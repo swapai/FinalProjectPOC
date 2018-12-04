@@ -37,9 +37,9 @@ var listOfApps = new Vue({
 
 
 methods: {
-gotoWebsiteNext() {
-   window.location = 'salesDashboard.html';
-}
+  gotoWebsiteNext() {
+      window.location = 'clientList.html';
+  }
 },
 
   created (){
