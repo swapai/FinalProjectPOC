@@ -3,10 +3,12 @@ var listOfApps = new Vue({
   data: {
     appList:[
       {
+        appNum:1,
         appName: "Name of first App",
         appDescription: "Description of the App"
       },
       {
+        appNum:2,
         appName: "Name of second App",
         appDescription: "Description of the App"
       }

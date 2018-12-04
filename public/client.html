@@ -54,7 +54,7 @@
           <!-- <button id="clientbutton" class="btn btn-primary" @click="gotoSite(c.clientId)" role="button">Client Sites</button> -->
           <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Client Dashboard</button>
         </p>
-        <span class="badge">3</span>
+        <span class="badge" v-if="a.appNum === 1">3</span>
       </div>
     </div>
   </main>
