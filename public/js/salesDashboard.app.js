@@ -1,4 +1,4 @@
-var listOfProducts = new Vue({
+var salesInformation = new Vue({
   el: '#salesMain',
   data: {
     productList:[
