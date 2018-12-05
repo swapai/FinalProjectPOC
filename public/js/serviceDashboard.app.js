@@ -1,5 +1,5 @@
 var salesInformation = new Vue({
-  el: '#salesMain',
+  el: '#serviceMain',
   data: {
     productList:[
       {
@@ -14,7 +14,8 @@ var salesInformation = new Vue({
         causeOfLastFailure: "Something happened",
         descriptionOfResolutionForLastFailure:"Code fix was pushed",
         downtimeInHoursForLastFailure: "2",
-        expectedDowntimeCurrent: "0"
+        expectedDowntimeCurrent: "0",
+        criticalityOfIssue: 0
       },
       {
         productNum:2,
@@ -28,7 +29,8 @@ var salesInformation = new Vue({
         causeOfLastFailure: "Something happened",
         descriptionOfResolutionForLastFailure:"Code fix was pushed",
         downtimeInHoursForLastFailure: "2",
-        expectedDowntimeCurrent: "0.15"
+        expectedDowntimeCurrent: "0.15",
+        criticalityOfIssue: 1
       },
       {
         productNum:3,
@@ -42,7 +44,8 @@ var salesInformation = new Vue({
         causeOfLastFailure: "Something happened",
         descriptionOfResolutionForLastFailure:"Code fix was pushed",
         downtimeInHoursForLastFailure: "2",
-        expectedDowntimeCurrent: "0"
+        expectedDowntimeCurrent: "0",
+        criticalityOfIssue: 2
       },
       {
         productNum:4,
@@ -56,7 +59,8 @@ var salesInformation = new Vue({
         causeOfLastFailure: "Something happened",
         descriptionOfResolutionForLastFailure:"Code fix was pushed",
         downtimeInHoursForLastFailure: "2",
-        expectedDowntimeCurrent: "0.15"
+        expectedDowntimeCurrent: "0.15",
+        criticalityOfIssue: 3
       }
     ]
 },
