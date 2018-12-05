@@ -1,5 +1,5 @@
 var listOfProducts = new Vue({
-  el: '#clientMain',
+  el: '#salesMain',
   data: {
     productList:[
       {
