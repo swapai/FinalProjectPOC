@@ -21,10 +21,10 @@
         </div>
         <div class="split right col-md-8 col-sm-12">
             <div class="centered">
-              <h1 id="logintitle">Cummins Integrated Application</h1>
-              <form action="appList.html">
+              <h1 id="logintitle">Cummins Integrated Application Portal</h1>
+              <form action="appList.html" onsubmit="location.href = this.action + "?user="+this.user.value; return false;">
                 <div>
-                  <input type="text" placeholder="Username" required>
+                  <input type="text" placeholder="Username" name="user" id="user" required>
                 </div>
                 <div>
                   <input type="password" placeholder="Password" required>
