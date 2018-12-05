@@ -97,6 +97,7 @@ body {
   padding-left:15px;
   padding-top: 25px;
   margin-bottom:15px;
+
 }
 
 .btn-primary {
@@ -117,7 +118,7 @@ body {
 
 .card{
   margin:50px;
-  margin-top: 75px;
+  margin-top: 50px;
   display:inline-block;
   padding: 10px;
   width: 25rem;
@@ -300,7 +301,7 @@ header{
         margin: 0;
         padding: 0;
         list-style-type: none;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
 
     ol.progtrckr li {
