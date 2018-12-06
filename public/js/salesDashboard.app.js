@@ -4,30 +4,30 @@ var salesInformation = new Vue({
     productList:[
       {
         productNum:1,
-        productName: "Name of first Client",
-        productID: "########",
-        modelNumber: "John Does",
+        productName: "X15",
+        productID: "#1556778",
+        modelNumber: "Stage V",
         productStatus: "In Operation",
       },
       {
         productNum:2,
-        productName: "Name of first Client",
-        productID: "########",
-        modelNumber: "John Does",
+        productName: "X15",
+        productID: "#1886778",
+        modelNumber: "Stage V",
         productStatus: "In Service",
       },
       {
         productNum:3,
-        productName: "Name of first Client",
-        productID: "########",
-        modelNumber: "John Does",
+        productName: "X12",
+        productID: "#7509778",
+        modelNumber: "Stage V",
         productStatus: "In Operation",
       },
       {
         productNum:4,
-        productName: "Name of first Client",
-        productID: "########",
-        modelNumber: "John Does",
+        productName: "B4.5",
+        productID: "#9552208",
+        modelNumber: "Stage V",
         productStatus: "In Service",
       }
     ]
@@ -35,13 +35,16 @@ var salesInformation = new Vue({
 
 
 methods: {
-  gotoWebsiteNext(productNum) {
-    if(productNum ==1){
-      window.location = 'salesDashboard.html';
+  gotoWebsiteNext(num) {
+    if(num ==1){
+      url = 'currentOrderDetails.html';
     }
-    if(productNum ==2){
-      window.location = 'serviceDashboard.html';
+    if(num ==2){
+      url = 'pastOrder.html';
     }
+    newwindow=window.open(url,'Order Details','height=300,width=300');
+       if (window.focus) {newwindow.focus()}
+       return false;
   }
 },
 

@@ -57,10 +57,10 @@ var listOfClients = new Vue({
 
 methods: {
   gotoWebsiteNext(clientNum) {
-    if(appNumberNotifiction ==1){
+    if(this.appNumberNotifiction ==1){
       window.location = 'salesDashboard.html';
     }
-    if(appNumberNotifiction ==2){
+    if(this.appNumberNotifiction ==2){
       window.location = 'serviceDashboard.html';
     }
   }
