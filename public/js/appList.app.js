@@ -2,7 +2,7 @@ var listOfApps = new Vue({
   el: '#appsMain',
   data: {
     userId:"",
-    appNumberNotifiction:0,
+     appNumberNotifiction:0,
     appList:[
       {
         appNum:1,
