@@ -74,11 +74,12 @@ methods: {
     if(productNum ==2){
       window.location = 'serviceDashboard.html';
     }
+  },
+  gotoWebsiteNextSensors(){
+      window.location = 'dashboard.html';
   }
 },
-gotoWebsiteNextSensors(){
-    window.location = 'dashboard.html';
-},
+
 
   created (){
 
