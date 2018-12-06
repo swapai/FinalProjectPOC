@@ -8,6 +8,7 @@ var salesInformation = new Vue({
         productID: "#1556778",
         modelNumber: "Stage V",
         productStatus: "In Operation",
+        adjustedLifeExpectancy: "80%",
       },
       {
         productNum:2,
@@ -15,6 +16,7 @@ var salesInformation = new Vue({
         productID: "#1886778",
         modelNumber: "Stage V",
         productStatus: "In Service",
+        adjustedLifeExpectancy: "80%",
       },
       {
         productNum:3,
@@ -22,6 +24,7 @@ var salesInformation = new Vue({
         productID: "#7509778",
         modelNumber: "Stage V",
         productStatus: "In Operation",
+        adjustedLifeExpectancy: "80%",
       },
       {
         productNum:4,
@@ -29,6 +32,7 @@ var salesInformation = new Vue({
         productID: "#9552208",
         modelNumber: "Stage V",
         productStatus: "In Service",
+        adjustedLifeExpectancy: "80%",
       }
     ]
 },

@@ -42,48 +42,43 @@
     <main id="serviceMain">
 
       <h1 class="pagetitle">Servie  Dashboard</h1>
-      <div class="card" style="height: 350px;width: 1100px;"  v-for="p in productList">
+      <div class="card" style="height: 300px; width:300px;"  v-for="p in productList">
 
-        <div class="card-body">
-          <h4 class="card-title">{{p.productName}}</h4>
-          <div class = "row">
-            <div class="col-5">
-              <h5 class="card-subtitle mb-2 text-muted">Product ID: {{p.productID}}</h5>
-              <h5 class="card-subtitle mb-2 text-muted">Model Number: {{p.modelNumber}}</h5>
-              <h5 class="card-subtitle mb-2 text-muted">Current Status: <strong class="increasedSize">{{p.productStatus}}</strong></h5>
-            </div>
-            <div class="col-6">
-              <h5 class="card-subtitle mb-2 text-muted">Last Service Date: {{p.lastServiceDate}}</h5>
-              <h5 class="card-subtitle mb-2 text-muted">Cause Of Last Failure: {{p.causeOfLastFailure}}</h5>
-              <h5 class="card-subtitle mb-2 text-muted">Resolution of Last Failure: {{p.descriptionOfResolutionForLastFailure}}</h5>
-              <h5 class="card-subtitle mb-2 text-muted">Downtime from Last Failure: {{p.downtimeInHoursForLastFailure}}</h5>
-            </div>
+          <div class="card-body">
+            <h4 class="card-title">{{p.productName}}</h4>
+            <br/>
+                <h5 class="card-subtitle mb-2 text-muted">Current Status: <strong class="increasedSize">{{p.productStatus}}</strong></h5>
+                <h5 class="card-subtitle mb-2 text-muted">Product ID: {{p.productID}}</h5>
+                <h5 class="card-subtitle mb-2 text-muted">Model Number: {{p.modelNumber}}</h5>
+                <h5 class="card-subtitle mb-2 text-muted">Expected downtime (hours): {{p.expectedDowntimeCurrent}}</h5>
+                <h5 class="card-subtitle mb-2 text-muted">Likelihood Of Failure: {{p.likelihoodOfFailureInFuture}}</h5>
+
+            <span v-if="p.criticalityOfIssue === 3">
+                <button id="buttonRed" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Send request to technician</button>
+            </span>
+            <span v-if="p.criticalityOfIssue === 2">
+                <button id="buttonYellow" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Send parts for replacement</button>
+            </span>
+            <span v-if="p.criticalityOfIssue === 1">
+                <button id="buttonGreen" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Check automated fix</button>
+            </span>
+              <span class="badgeSquare">Adjusted Life Expectancy: <strong class="increasedSize">{{p.adjustedLifeExpectancy}}</strong></span>
+              <div>
+                <button class="collapsible btn btn-primary clientbutton">Last Action</button>
+                    <div class="content">
+                      <h5 class="card-subtitle mb-2 text-muted">Last Service Date: {{p.lastServiceDate}}</h5>
+                      <h5 class="card-subtitle mb-2 text-muted">Cause Of Last Failure: {{p.causeOfLastFailure}}</h5>
+                      <h5 class="card-subtitle mb-2 text-muted">Resolution of Last Failure: {{p.descriptionOfResolutionForLastFailure}}</h5>
+                      <h5 class="card-subtitle mb-2 text-muted">Downtime from Last Failure (hours): {{p.downtimeInHoursForLastFailure}}</h5>
+                      <p>
+                        <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">View Historic Sensor Data</button>
+                      </p>
+                    </div>
+              </div>
+
           </div>
-          <div class="row">
 
-          </div>
-
-          <h5 class="card-subtitle mb-2 text-muted">Expected current downtime: {{p.expectedDowntimeCurrent}}</h5>
-          <h5 class="card-subtitle mb-2 text-muted">Likelihood Of Failure: {{p.likelihoodOfFailureInFuture}}</h5>
-
-
-
-
-          <p>
-            <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">View Historic Sensor Data</button>
-          </p>
-          <div v-if="p.criticalityOfIssue === 3">
-              <button id="buttonRed" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Send request to technician</button>
-          </div>
-          <span v-if="p.criticalityOfIssue === 2">
-              <button id="buttonYellow" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Send parts for replacement</button>
-          </span>
-          <span v-if="p.criticalityOfIssue === 1">
-              <button id="buttonGreen" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Check automated fix</button>
-          </span>
-            <span class="badgeSquare">Adjusted Life Expectancy: <strong class="increasedSize">{{p.adjustedLifeExpectancy}}</strong></span>
         </div>
-      </div>
     </main>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -92,6 +87,22 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="js/serviceDashboard.app.js"></script>
+  <script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
 
 </body>
 

@@ -66,12 +66,13 @@
           <h4 class="card-title">{{p.productName}}</h4>
           <h5 class="card-subtitle mb-2 text-muted">Product ID: {{p.productID}}</h5>
           <h5 class="card-subtitle mb-2 text-muted">Model Number: {{p.modelNumber}}</h5>
-          <h5 class="card-subtitle mb-2 text-muted">Current Status: {{p.productStatus}}</h5>
+          <h5 class="card-subtitle mb-2 text-muted">Current Status: <strong class="increasedSize">{{p.productStatus}}</strong></h5>
           <p>
             <!-- <button id="clientbutton" class="btn btn-primary" @click="gotoSite(c.clientId)" role="button">Client Sites</button> -->
             <button id="button1" class="btn btn-primary clientbutton" @click="gotoWebsiteNext(2)" role="button">View Order Details</button>
             <!-- <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNext(p.productNum)" role="button">Launch</button> -->
           </p>
+            <span class="badgeSquare">Adjusted Life Expectancy: <strong class="increasedSize">{{p.adjustedLifeExpectancy}}</strong></span>
         </div>
       </div>
   </main>
