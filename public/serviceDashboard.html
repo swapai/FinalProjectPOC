@@ -32,7 +32,7 @@
         <div class="col-1 logo">
         </div>
         <div class="col-1 logo ">
-                      <a href="index.html"><img src="images/images.png" class="profileImage" title="Logout" /></a>
+            <a href="index.html"><img src="images/images.png" class="profileImage" title="Logout" /></a>
         </div>
     </div>
 
@@ -42,32 +42,46 @@
     <main id="serviceMain">
 
       <h1 class="pagetitle">Servie  Dashboard</h1>
-      <div class="card" style="height: 500px;" v-for="p in productList">
+      <div class="card" style="height: 350px;width: 1100px;"  v-for="p in productList">
 
         <div class="card-body">
           <h4 class="card-title">{{p.productName}}</h4>
-          <h5 class="card-subtitle mb-2 text-muted">Product ID: {{p.productID}}</h5>
-          <h5 class="card-subtitle mb-2 text-muted">Model Number: {{p.modelNumber}}</h5>
-          <h5 class="card-subtitle mb-2 text-muted">Current Status: {{p.productStatus}}</h5>
+          <div class = "row">
+            <div class="col-5">
+              <h5 class="card-subtitle mb-2 text-muted">Product ID: {{p.productID}}</h5>
+              <h5 class="card-subtitle mb-2 text-muted">Model Number: {{p.modelNumber}}</h5>
+              <h5 class="card-subtitle mb-2 text-muted">Current Status: <strong class="increasedSize">{{p.productStatus}}</strong></h5>
+            </div>
+            <div class="col-6">
+              <h5 class="card-subtitle mb-2 text-muted">Last Service Date: {{p.lastServiceDate}}</h5>
+              <h5 class="card-subtitle mb-2 text-muted">Cause Of Last Failure: {{p.causeOfLastFailure}}</h5>
+              <h5 class="card-subtitle mb-2 text-muted">Resolution of Last Failure: {{p.descriptionOfResolutionForLastFailure}}</h5>
+              <h5 class="card-subtitle mb-2 text-muted">Downtime from Last Failure: {{p.downtimeInHoursForLastFailure}}</h5>
+            </div>
+          </div>
+          <div class="row">
+
+          </div>
+
           <h5 class="card-subtitle mb-2 text-muted">Expected current downtime: {{p.expectedDowntimeCurrent}}</h5>
-          <h5 class="card-subtitle mb-2 text-muted">Adjusted Life Expectancy: {{p.adjustedLifeExpectancy}}</h5>
           <h5 class="card-subtitle mb-2 text-muted">Likelihood Of Failure: {{p.likelihoodOfFailureInFuture}}</h5>
-          <h5 class="card-subtitle mb-2 text-muted">Last Service Date: {{p.lastServiceDate}}</h5>
-          <h5 class="card-subtitle mb-2 text-muted">Cause Of Last Failure: {{p.causeOfLastFailure}}</h5>
-          <h5 class="card-subtitle mb-2 text-muted">Resolution of Last Failure: {{p.descriptionOfResolutionForLastFailure}}</h5>
-          <h5 class="card-subtitle mb-2 text-muted">Downtime from Last Failure: {{p.downtimeInHoursForLastFailure}}</h5>
+
+
+
+
           <p>
             <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">View Historic Sensor Data</button>
           </p>
-          <div v-if="p.criticalityOfIssue === 1">
+          <div v-if="p.criticalityOfIssue === 3">
               <button id="buttonRed" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Send request to technician</button>
           </div>
           <span v-if="p.criticalityOfIssue === 2">
-              <button id="buttonYellow" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Send parts</button>
+              <button id="buttonYellow" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Send parts for replacement</button>
           </span>
-          <span v-if="p.criticalityOfIssue === 3">
-              <button id="buttonGreen" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Deploy automated fix</button>
+          <span v-if="p.criticalityOfIssue === 1">
+              <button id="buttonGreen" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Check automated fix</button>
           </span>
+            <span class="badgeSquare">Adjusted Life Expectancy: <strong class="increasedSize">{{p.adjustedLifeExpectancy}}</strong></span>
         </div>
       </div>
     </main>

@@ -393,3 +393,34 @@ header{
 
 
 /**** CSS for progress :end ****/
+.innerCircle{
+  border-style: solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.innerCard{
+  border-style: solid;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.badgeSquare {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  padding: 5px 10px;
+  background: #4186f4;
+  color: white;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  font-size: 10pt;
+}
+
+.increasedSize{
+    font-size: 14pt;
+}
