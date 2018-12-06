@@ -76,6 +76,9 @@ methods: {
     }
   }
 },
+gotoWebsiteNextSensors(){
+    window.location = 'dashboard.html';
+},
 
   created (){
 
