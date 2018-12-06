@@ -52,7 +52,12 @@
           <!-- <button id="clientbutton" class="btn btn-primary" @click="gotoSite(c.clientId)" role="button">Client Sites</button> -->
           <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Launch</button>
         </p>
-        <span class="badge" v-if="appNumberNotifiction == 2 && appNumberNotifiction == a.appNum">3</span>
+        <span v-if="1 == a.appNum"><img class="badgeImage" src = "images/sales.jpg"/></span>
+        <span v-if="2 == a.appNum"><img class="badgeImage" src = "images/smart.jpg"/></span>
+        <span v-if="3 == a.appNum"><img class="badgeImage" src = "images/jira.png"/></span>
+        <span v-if="4 == a.appNum"><img class="badgeImage" src = "images/splunk.png"/></span>
+        <span v-if="5 == a.appNum"><img class="badgeImage" src = "images/awscodedeploy.png"/></span>
+        <span v-if="6 == a.appNum"><img class="badgeImage" src = "images/seleniuma.jpg"/></span>
       </div>
     </div>
   </main>

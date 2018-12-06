@@ -421,6 +421,19 @@ header{
   font-size: 8pt;
 }
 
+.badgeImage {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px 10px;
+  background: #682c32;
+  color: white;
+  height: 60px;
+  width: 70px;
+  text-align: center;
+  font-size: 8pt;
+}
+
 .increasedSize{
     font-size: 14pt;
 }
