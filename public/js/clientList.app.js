@@ -1,6 +1,7 @@
 var listOfClients = new Vue({
   el: '#clientMain',
   data: {
+    appNumberNotifiction:0,
     clientList:[
       {
         clientNum:1,
@@ -56,10 +57,10 @@ var listOfClients = new Vue({
 
 methods: {
   gotoWebsiteNext(clientNum) {
-    if(clientNum ==1){
+    if(appNumberNotifiction ==1){
       window.location = 'salesDashboard.html';
     }
-    if(clientNum ==2){
+    if(appNumberNotifiction ==2){
       window.location = 'serviceDashboard.html';
     }
   }
@@ -67,10 +68,10 @@ methods: {
 
   created (){
 
-    // const url = new URL(window.location.href);
-    // const clientId = url.searchParams.get('clientId');
-    // console.log('Client Id: '+ clientId);
-    // this.site.clientId = clientId;
+    const url = new URL(window.location.href);
+    const appNumber = url.searchParams.get('appNumber');
+    console.log('App number: '+ appNumber);
+    this.appNumberNotifiction = appNumber;
     //
     // fetch('api/site.php?clientId='+clientId)
     // .then( response => response.json() )
