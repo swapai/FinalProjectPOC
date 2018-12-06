@@ -198,6 +198,7 @@ buildTripsAndStartsChart(){
             label: {
                 connectorAllowed: false
             },
+            color: 'purple',
             pointStart: 2010
         }
     },
