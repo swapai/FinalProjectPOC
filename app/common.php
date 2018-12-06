@@ -11,4 +11,4 @@ stripos($_SERVER['CONTENT_TYPE'],'application/json') !== false){
 
 require 'environment.php';
 /** MODELS **/
-require 'models/SensorDeployed.php';
+require 'models/SensorTimeSeries.php';
