@@ -5,19 +5,19 @@ var listOfClients = new Vue({
     clientList:[
       {
         clientNum:1,
-        clientName: "Name of first Client",
-        clientID: "########",
-        contactName: "John Does",
-        contactEmail: "mail@mail.com",
-        clientAddress: "Location Address of Client"
+        clientName: "Hitachi Construction Machinery - North America",
+        clientID: "#AXBBB99",
+        contactName: "William Joe",
+        contactEmail: "wijoe@hitachicon.com",
+        clientAddress: "1000 Deere Hitachi Road, Kernersville NC 27285, U.S.A"
       },
       {
         clientNum:2,
-        clientName: "Name of Second Client",
-        clientID: "########",
-        contactName: "John Does",
-        contactEmail: "mail@mail.com",
-        clientAddress: "Location Address of Client"
+        clientName: "Ram Trucks",
+        clientID: "#A78BB99",
+        contactName: "Cathy Bing",
+        contactEmail: "cabing@ramtrucks.com",
+        clientAddress: "2200 S Walnut St, Bloomington, IN 47401"
       },
       {
         clientNum:3,
