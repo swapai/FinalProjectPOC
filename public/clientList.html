@@ -42,10 +42,11 @@
   <main id="clientMain">
 
     <h1 class="pagetitle">Client Dashboard</h1>
-    <div class="card" style="height: 200px;" v-for="c in clientList">
+    <div class="card" style="height: 220px;" v-for="c in clientList">
 
       <div class="card-body">
         <h4 class="card-title">{{c.clientName}}</h4>
+        <br />
         <h5 class="card-subtitle mb-2 text-muted">Client ID: {{c.clientID}}</h5>
         <h5 class="card-subtitle mb-2 text-muted">Primary Contact: {{c.contactName}}</h5>
         <h5 class="card-subtitle mb-2 text-muted">Email: {{c.contactEmail}}</h5>
