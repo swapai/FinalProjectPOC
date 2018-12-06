@@ -324,7 +324,9 @@ header{
   color: white;
 }
 
-
+.card-title{
+  color: #ad2116;
+}
 
 /**** CSS for progress :start ****/
 
