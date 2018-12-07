@@ -51,7 +51,7 @@ var salesInformation = new Vue({
         likelihoodOfFailureInFuture:"50%",
         lastServiceDate: "2017-11-11",
         causeOfLastFailure: "Hydrocyclone broke down",
-        descriptionOfResolutionForLastFailure:"Part was replaced",
+        descriptionOfResolutionForLastFailure:"Part was replaced by Eric Was",
         downtimeInHoursForLastFailure: "2",
         expectedDowntimeCurrent: "0.25",
         criticalityOfIssue: 2
