@@ -9,7 +9,7 @@ var listOfClients = new Vue({
         clientID: "#AXBBB99",
         contactName: "William Joe",
         contactEmail: "wijoe@hitachicon.com",
-        clientAddress: "1000 Deere Hitachi Road, Kernersville NC 27285, U.S.A"
+        clientAddress: "1000 Deere Hitachi Road, Kernersville, NC 27285"
       },
       {
         clientNum:2,
@@ -21,35 +21,27 @@ var listOfClients = new Vue({
       },
       {
         clientNum:3,
-        clientName: "Name of Third Client",
-        clientID: "########",
-        contactName: "John Does",
-        contactEmail: "mail@mail.com",
-        clientAddress: "Location Address of Client"
+        clientName: "Yale Pacific",
+        clientID: "#H73BJ21",
+        contactName: "Gina Gonzalez",
+        contactEmail: "gina@yalep.com",
+        clientAddress: "5200 Greenville Blvd NE,Greenville, NC 27834"
       },
       {
         clientNum:4,
-        clientName: "Name of fourth Client",
-        clientID: "########",
-        contactName: "John Does",
-        contactEmail: "mail@mail.com",
-        clientAddress: "Location Address of Client"
+        clientName: "Volvo Construction Equipment",
+        clientID: "#K43AJ00",
+        contactName: "George Shaw",
+        contactEmail: "shawgeorge@volvo.com",
+        clientAddress: "312 Volvo Way, Shippensburg, PA 17257"
       },
       {
         clientNum:5,
-        clientName: "Name of fifth Client",
-        clientID: "########",
-        contactName: "John Does",
-        contactEmail: "mail@mail.com",
-        clientAddress: "Location Address of Client"
-      },
-      {
-        clientNum:6,
-        clientName: "Name of sixth Client",
-        clientID: "########",
-        contactName: "John Does",
-        contactEmail: "mail@mail.com",
-        clientAddress: "Location Address of Client"
+        clientName: "Freightliner",
+        clientID: "#M22AH03",
+        contactName: "Hami Smith",
+        contactEmail: "hami.smith@freightliner.com",
+        clientAddress: "3830 W Willoughby Dr, Edinburgh, IN 46124"
       }
     ]
 },
