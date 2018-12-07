@@ -33,9 +33,9 @@ class ProductList
     $this->lastServiceDate = $row['lastServiceDate'];
     $this->causeOfLastFailure = $row['causeOfLastFailure'];
     $this->descriptionOfResolutionForLastFailure = $row['descriptionOfResolutionForLastFailure'];
-    $this->modelNumber = $row['downtimeInHoursForLastFailure'];
-    $this->productStatus = $row['expectedDowntimeCurrent'];
-    $this->productStatus = $row['criticalityOfIssue'];
+    $this->downtimeInHoursForLastFailure = $row['downtimeInHoursForLastFailure'];
+    $this->expectedDowntimeCurrent = $row['expectedDowntimeCurrent'];
+    $this->criticalityOfIssue = $row['criticalityOfIssue'];
     }
 
     public static function fetchAll() {
