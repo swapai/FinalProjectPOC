@@ -42,19 +42,45 @@
     <main id="serviceMain">
 
       <h1 class="pagetitle">Servie  Dashboard</h1>
-      <div class="card" style="height: 300px; width:300px;"  v-for="p in productList">
+      <!-- <div class="alert alert-danger alert-dismissable" id="alertRed">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          Email sent to technician David Walls (Emp ID: 47401)
+      </div> -->
+      <div class="card" style="height: 400px; width:300px;"  v-for="p in productList">
 
           <div class="card-body">
             <h4 class="card-title">{{p.productName}}</h4>
             <br/>
-                <h5 class="card-subtitle mb-2 text-muted">Current Status: <strong class="increasedSize">{{p.productStatus}}</strong></h5>
+
                 <h5 class="card-subtitle mb-2 text-muted">Product ID: {{p.productID}}</h5>
                 <h5 class="card-subtitle mb-2 text-muted">Model Number: {{p.modelNumber}}</h5>
                 <h5 class="card-subtitle mb-2 text-muted">Expected downtime (hours): {{p.expectedDowntimeCurrent}}</h5>
                 <h5 class="card-subtitle mb-2 text-muted">Likelihood Of Failure: {{p.likelihoodOfFailureInFuture}}</h5>
-
+                <h5 class="card-subtitle mb-2 text-muted">Current Status: <strong class="increasedSize">{{p.productStatus}}</strong></h5>
             <span v-if="p.criticalityOfIssue === 3">
-                <button id="buttonRed" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Send request to technician</button>
+                <button id="buttonRed" class="btn btn-primary clientbutton"  data-toggle="modal" data-target="#myModalRed" @click="disableRedButton()" role="button">Send request to technician</button>
+                <div>
+                  <div id="myModalRed" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Email Sent!</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                          <p>
+                              Email with details sent to technician David Walls (Emp ID: 47401)
+                          </p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary clientbutton" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
             </span>
             <span v-if="p.criticalityOfIssue === 2">
                 <button id="buttonYellow" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Send parts for replacement</button>
@@ -62,9 +88,10 @@
             <span v-if="p.criticalityOfIssue === 1">
                 <button id="buttonGreen" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Check automated fix</button>
             </span>
-              <span class="badgeSquare">Adjusted Life Expectancy: <strong class="increasedSize">{{p.adjustedLifeExpectancy}}</strong></span>
+              <span class="badgeSquare">Adjusted Life Expectancy in days:<p> <strong class="increasedSize">{{p.adjustedLifeExpectancy}}</strong></p></span>
               <div>
                 <button class="btn btn-primary clientbutton" data-toggle="modal" data-target="#myModal3" role="button">Last Action</button>
+                <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNextSensors()" role="button">View Historic Sensor Data</button>
                 <div id="myModal3" class="modal fade" role="dialog">
                   <div class="modal-dialog modal-lg">
                     <!-- Modal content-->
@@ -74,16 +101,35 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <div class="modal-body">
-                        <p>Last Service Date: {{p.lastServiceDate}}</p>
-                          <p>Cause Of Last Failure: {{p.causeOfLastFailure}}</p>
-                            <p>Resolution of Last Failure: {{p.descriptionOfResolutionForLastFailure}}</p>
-                              <p>Downtime from Last Failure (hours): {{p.downtimeInHoursForLastFailure}}</p>
-                                <p>Product Status: {{p.productStatus}}</p>
+                        <table class="table table-hover">
+                          <thead>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Last Service Date</td>
+                              <td>{{p.lastServiceDate}}</td>
+                            </tr>
+                            <tr>
+                              <td>Cause Of Last Failure</td>
+                              <td>{{p.causeOfLastFailure}}</td>
+                            </tr>
+                            <tr>
+                              <td>Resolution of Last Failure</td>
+                              <td>{{p.descriptionOfResolutionForLastFailure}}</td>
+                            </tr>
+                            <tr>
+                              <td>Downtime from Last Failure (hours)</td>
+                              <td>{{p.downtimeInHoursForLastFailure}}</td>
+                            </tr>
+                            <tr>
+                              <td>Product Status</td>
+                              <td>{{p.productStatus}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                       <div class="modal-footer">
-                        <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNextSensors()" role="button">View Historic Sensor Data</button>
                         <button type="button" class="btn btn-primary clientbutton" data-dismiss="modal">Close</button>
-
                       </div>
                     </div>
 
@@ -97,6 +143,13 @@
                       <h5 class="card-subtitle mb-2 text-muted">Downtime from Last Failure (hours): {{p.downtimeInHoursForLastFailure}}</h5>
                       <p>
                         <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNextSensors()" role="button">View Historic Sensor Data</button>
+
+
+
+
+
+
+
                       </p>
                     </div> -->
               </div>

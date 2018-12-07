@@ -473,3 +473,12 @@ header{
   background-image: url('images/X15_StageV.png');
   opacity: 0.4;
 }
+/*Blur background for modal*/
+.modal-open .container-fluid, .modal-open  .container {
+    -webkit-filter: blur(5px) grayscale(90%);
+}
+
+
+#alertRed{
+  display:none;
+}

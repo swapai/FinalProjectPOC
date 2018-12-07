@@ -89,6 +89,10 @@ methods: {
   },
   gotoWebsiteNextSensors(){
       window.location = 'dashboard.html';
+  },
+  disableRedButton(){
+    // $("#alertRed").hide().show('medium');
+    $('#buttonRed').hide();
   }
 },
 

@@ -62,6 +62,7 @@ methods: {
        if (window.focus) {newwindow.focus()}
        return false;
   }
+
 },
 
   created (){
