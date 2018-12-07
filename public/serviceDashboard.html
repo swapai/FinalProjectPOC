@@ -58,7 +58,7 @@
                 <h5 class="card-subtitle mb-2 text-muted">Likelihood Of Failure: {{p.likelihoodOfFailureInFuture}}</h5>
                 <h5 class="card-subtitle mb-2 text-muted">Current Status: <strong class="increasedSize">{{p.productStatus}}</strong></h5>
             <span v-if="p.criticalityOfIssue === 3">
-                <button id="buttonRed" class="btn btn-primary clientbutton"  data-toggle="modal" data-target="#myModalRed" @click="disableRedButton()" role="button">Send request to technician</button>
+                <button id="buttonRed" class="btn btn-primary clientbutton"  data-toggle="modal" data-target="#myModalRed" @click="disableRedButton()" role="button">Request assistance</button>
                 <div>
                   <div id="myModalRed" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-lg">
