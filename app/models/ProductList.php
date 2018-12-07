@@ -35,7 +35,7 @@ class ProductList
     $this->descriptionOfResolutionForLastFailure = $row['descriptionOfResolutionForLastFailure'];
     $this->downtimeInHoursForLastFailure = $row['downtimeInHoursForLastFailure'];
     $this->expectedDowntimeCurrent = $row['expectedDowntimeCurrent'];
-    $this->criticalityOfIssue = $row['criticalityOfIssue'];
+    $this->criticalityOfIssue = intval($row['criticalityOfIssue']);
     }
 
     public static function fetchAll() {
