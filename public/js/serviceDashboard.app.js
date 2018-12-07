@@ -93,6 +93,14 @@ methods: {
   disableRedButton(){
     // $("#alertRed").hide().show('medium');
     $('#buttonRed').hide();
+  },
+  disableYellowButton(){
+    // $("#alertRed").hide().show('medium');
+    $('#buttonYellow').hide();
+  },
+  disableGreenButton(){
+    // $("#alertRed").hide().show('medium');
+    $('#buttonGreen').hide();
   }
 },
 
