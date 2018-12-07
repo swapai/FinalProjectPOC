@@ -64,8 +64,33 @@
             </span>
               <span class="badgeSquare">Adjusted Life Expectancy: <strong class="increasedSize">{{p.adjustedLifeExpectancy}}</strong></span>
               <div>
-                <button class="collapsible btn btn-primary clientbutton">Last Action</button>
-                    <div class="content">
+                <button class="btn btn-primary clientbutton" data-toggle="modal" data-target="#myModal3" role="button">Last Action</button>
+                <div id="myModal3" class="modal fade" role="dialog">
+                  <div class="modal-dialog modal-lg">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">Product ID: {{p.productID}}</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Last Service Date: {{p.lastServiceDate}}</p>
+                          <p>Cause Of Last Failure: {{p.causeOfLastFailure}}</p>
+                            <p>Resolution of Last Failure: {{p.descriptionOfResolutionForLastFailure}}</p>
+                              <p>Downtime from Last Failure (hours): {{p.downtimeInHoursForLastFailure}}</p>
+                                <p>Product Status: {{p.productStatus}}</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNextSensors()" role="button">View Historic Sensor Data</button>
+                        <button type="button" class="btn btn-primary clientbutton" data-dismiss="modal">Close</button>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                    <!-- <div class="content">
                       <h5 class="card-subtitle mb-2 text-muted">Last Service Date: {{p.lastServiceDate}}</h5>
                       <h5 class="card-subtitle mb-2 text-muted">Cause Of Last Failure: {{p.causeOfLastFailure}}</h5>
                       <h5 class="card-subtitle mb-2 text-muted">Resolution of Last Failure: {{p.descriptionOfResolutionForLastFailure}}</h5>
@@ -73,7 +98,7 @@
                       <p>
                         <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNextSensors()" role="button">View Historic Sensor Data</button>
                       </p>
-                    </div>
+                    </div> -->
               </div>
 
           </div>

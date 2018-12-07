@@ -44,8 +44,9 @@
 
     <h1 class="pagetitle">Client Dashboard</h1>
 
-    <div class = "row">
+    <div>
       <h3 class="pagetitle">Current Order Status</h3>
+      <h4 class="pagetitle">Order Number: X15V9855554</h4>
       <div class="row card">
         <ol class="progtrckr" data-progtrckr-steps="5">
           <li class="progtrckr-done">Order Processing</li>
@@ -54,7 +55,49 @@
           <li class="progtrckr-done">Shipped</li>
           <li class="progtrckr-todo">Delivered</li>
         </ol>
-        <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNext(1)" role="button">Order Details</button>
+        <!-- <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNext(1)" role="button">Order Details</button> -->
+        <button id="button" class="btn btn-primary clientbutton" data-toggle="modal" data-target="#myModal" role="button">Order Details</button>
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Order Number: X15V9855554</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p>Order Date: 2018-10-10</p>
+                <p>Estimated Date of Delivery: 2019-01-01</p>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Product Name</th>
+                      <th>Model Number</th>
+                      <th>Product ID</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>X15</td>
+                      <td>Stage V</td>
+                      <td>#1559420</td>
+                    </tr>
+                    <tr>
+                      <td>X15</td>
+                      <td>Stage V</td>
+                      <td>#1559450</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary clientbutton" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
 
     </div>
@@ -70,10 +113,34 @@
           <h5 class="card-subtitle mb-2 text-muted">Current Status: <strong class="increasedSize">{{p.productStatus}}</strong></h5>
           <p>
             <!-- <button id="clientbutton" class="btn btn-primary" @click="gotoSite(c.clientId)" role="button">Client Sites</button> -->
-            <button id="button1" class="btn btn-primary clientbutton" @click="gotoWebsiteNext(2)" role="button">View Order Details</button>
+            <!-- <button id="button1" class="btn btn-primary clientbutton" @click="gotoWebsiteNext(2)" role="button">View Order Details</button> -->
+            <button id="button1" class="btn btn-primary clientbutton" data-toggle="modal" data-target="#myModal2" role="button">View Order Details</button>
+            <!-- Modal -->
+            <div id="myModal2" class="modal fade" role="dialog">
+              <div class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Order Number: {{p.orderNumber}}</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Product ID: {{p.productID}}</p>
+                      <p>Model Number: {{p.modelNumber}}</p>
+                        <p>Order Date: {{p.orderDate}}</p>
+                          <p>Delivery Date: {{p.deliveryDate}}</p>
+                            <p>Product Status: {{p.productStatus}}</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary clientbutton" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
             <!-- <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNext(p.productNum)" role="button">Launch</button> -->
           </p>
-            <span class="badgeSquare">Adjusted Life Expectancy: <strong class="increasedSize">{{p.adjustedLifeExpectancy}}</strong></span>
+            <span class="badgeSquare">Adjusted Life Expectancy in days:<p> <strong class="increasedSize">{{p.adjustedLifeExpectancy}}</strong></p></span>
         </div>
       </div>
   </main>
