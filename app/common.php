@@ -13,3 +13,4 @@ require 'environment.php';
 /** MODELS **/
 require 'models/SensorTimeSeries.php';
 require 'models/ClientList.php';
+require 'models/ProductList.php';
