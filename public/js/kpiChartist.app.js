@@ -39,9 +39,9 @@ formatSensorStats() {
 },
 buildOutputChart(){
   new Chartist.Line('.ct-chart', {
-    labels: [1, 2, 3, 4, 5, 6, 7, 8],
+    labels: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate)] ),
     series: [
-      [5, 9, 7, 8, 5, 3, 5, 4]
+    this.kpiList.map( item => [Number(item.firedHours)] ),
     ]
   }, {
     low: 0,
