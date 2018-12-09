@@ -80,6 +80,7 @@ var kpiApp = new Vue({
                     lineWidth: 1,
                     states: {
                         hover: {
+                            lineColor: '#000000',
                             lineWidth: 1
                         }
                     },
