@@ -251,17 +251,15 @@ buildTripsAndStartsChart(){
 buildCompressorEfficiencyChart(){
   Highcharts.chart('compressorEfficiencyChart', {
     title: {
-        text: 'Compressor Efficiency Chart'
+        text: 'Operational Efficiency Chart'
     },
     yAxis: {
             title: {
-                text: 'Compressor Efficiency (%)'
+                text: 'Operational Efficiency (%)'
             },
         },
         legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle'
+            enabled: false
         },
 
         plotOptions: {
@@ -273,7 +271,7 @@ buildCompressorEfficiencyChart(){
         },
 
     series: [{
-        name: 'Compressor Efficiency (%)',
+        name: 'Operational Efficiency (%)',
         // Data needs [ [date, num], [date2, num2 ], ... ]
         data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.compressorEfficiency)] )
     }],
@@ -284,9 +282,7 @@ buildCompressorEfficiencyChart(){
            },
            chartOptions: {
                legend: {
-                   layout: 'horizontal',
-                   align: 'center',
-                   verticalAlign: 'bottom'
+                  enabled: false
                }
            }
        }]
