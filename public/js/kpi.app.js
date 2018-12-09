@@ -179,7 +179,7 @@ var kpiApp = new Vue({
   },buildTripsChart(){
       Highcharts.chart('tripsChart', {
             title: {
-                text: 'Starts'
+                text: 'Trips'
             },
             xAxis: {
                 type: 'datetime'
