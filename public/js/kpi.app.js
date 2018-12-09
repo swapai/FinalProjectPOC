@@ -266,9 +266,9 @@ buildCompressorEfficiencyChart(){
             series: {
                 label: {
                     connectorAllowed: true,
-                    lineColor: '#682c32',
-                    lineWidth: 1,
-                }
+                },
+                lineColor: '#682c32',
+                lineWidth: 1,
             }
         },
 
