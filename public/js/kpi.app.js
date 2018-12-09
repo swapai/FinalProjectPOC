@@ -72,11 +72,11 @@ var kpiApp = new Vue({
                         ]
                     },
                     marker: {
-                        radius: 2,
-                        lineColor: '#682c32',
+                        radius: 1,
+                        lineColor: '#000000',
                         fillColor: '#682c32'
                     },
-                    lineColor: '#682c32',
+                    lineColor: '#000000',
                     lineWidth: 1,
                     states: {
                         hover: {
