@@ -44,14 +44,15 @@ var kpiApp = new Vue({
   buildOutputChart(){
       Highcharts.chart('outputChart', {
             title: {
-                text: 'Cumulative Sensor Output'
+                text: 'Engine Power'
             },
             xAxis: {
                 type: 'datetime',
+                color: 'rgba(68, 170, 213, 0)'
             },
             yAxis: {
                 title: {
-                    text: 'Power'
+                    text: 'Power (kW)'
                 }
             },
             legend: {
