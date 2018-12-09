@@ -78,6 +78,7 @@ var kpiApp = new Vue({
                     },
                     lineColor: '#000000',
                     lineWidth: 1,
+                    enableMouseTracking: true,
                     states: {
                         hover: {
                             lineColor: '#000000',
@@ -222,6 +223,7 @@ buildTripsAndStartsChart(){
                 connectorAllowed: false
             },
             color: 'purple',
+            enableMouseTracking: true,
             pointStart: 2010
         }
     },
@@ -276,6 +278,7 @@ buildCompressorEfficiencyChart(){
                 },
                 lineColor: '#682c32',
                 lineWidth: 1,
+                enableMouseTracking: true,
             }
         },
         tooltip: {
