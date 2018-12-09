@@ -152,14 +152,14 @@
             </span>
               <span class="badgeSquare">Adjusted Life Expectancy in days:<p> <strong class="increasedSize">{{p.adjustedLifeExpectancy}}</strong></p></span>
               <div>
-                <button class="btn btn-primary clientbutton" data-toggle="modal" data-target="#myModal3" role="button">Last Action</button>
+                <button class="btn btn-primary clientbutton" data-toggle="modal" data-target="#myModal3" role="button"  @click="getProductInformationFromId(p.productNum)">Last Action</button>
                 <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNextSensors()" role="button">View Historic Sensor Data</button>
                 <div id="myModal3" class="modal fade" role="dialog">
                   <div class="modal-dialog modal-lg">
                     <!-- Modal content-->
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title">Product ID: {{p.productID}}</h4>
+                        <h4 class="modal-title">Product ID: {{singleProduct.productID}}</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <div class="modal-body">
@@ -169,23 +169,23 @@
                           <tbody>
                             <tr>
                               <td>Last Service Date</td>
-                              <td>{{p.lastServiceDate}}</td>
+                              <td>{{singleProduct.lastServiceDate}}</td>
                             </tr>
                             <tr>
                               <td>Cause Of Last Failure</td>
-                              <td>{{p.causeOfLastFailure}}</td>
+                              <td>{{singleProduct.causeOfLastFailure}}</td>
                             </tr>
                             <tr>
                               <td>Resolution of Last Failure</td>
-                              <td>{{p.descriptionOfResolutionForLastFailure}}</td>
+                              <td>{{singleProduct.descriptionOfResolutionForLastFailure}}</td>
                             </tr>
                             <tr>
                               <td>Downtime from Last Failure (hours)</td>
-                              <td>{{p.downtimeInHoursForLastFailure}}</td>
+                              <td>{{singleProduct.downtimeInHoursForLastFailure}}</td>
                             </tr>
                             <tr>
                               <td>Product Status</td>
-                              <td>{{p.productStatus}}</td>
+                              <td>{{singleProduct.productStatus}}</td>
                             </tr>
                           </tbody>
                         </table>

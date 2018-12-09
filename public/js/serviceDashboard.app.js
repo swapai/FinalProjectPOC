@@ -1,6 +1,24 @@
 var serviceInformation = new Vue({
   el: '#serviceMain',
   data: {
+    singleProduct:{
+        productNum:0,
+        productName: "",
+        productID: "",
+        modelNumber: "",
+        productStatus: "",
+        adjustedLifeExpectancy: "",
+        orderNumber: "",
+        orderDate: "",
+        deliveryDate: "",
+        likelihoodOfFailureInFuture:"",
+        lastServiceDate: "",
+        causeOfLastFailure: "",
+        descriptionOfResolutionForLastFailure:"",
+        downtimeInHoursForLastFailure: "",
+        expectedDowntimeCurrent: "",
+        criticalityOfIssue: 0
+    },
     productList:[
       // {
       //   productNum:1,
@@ -99,6 +117,14 @@ methods: {
   disableGreenButton(){
     // $("#alertRed").hide().show('medium');
     $('#buttonGreen').hide();
+  },
+  getProductInformationFromId(productNum){
+    list = this.productList;
+    for(i=0; i<list.length; i++){
+      if(list[i].productNum == productNum){
+        this.singleProduct = list[i].productNum;
+      }
+    }
   }
 },
 
