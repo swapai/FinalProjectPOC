@@ -26,6 +26,7 @@ var kpiApp = new Vue({
       this.formatSensorStats();
       this.buildFiredHoursChart();
       this.buildStartsChart();
+      this.buildTripsChart();
       this.buildTripsAndStartsChart();
       this.buildAvailabilityAndReliabilityChart();
     } )
@@ -169,11 +170,76 @@ var kpiApp = new Vue({
             },
             series: [{
                 type: 'area',
-                name: 'Power',
                 lineColor: '#000000',
                 color: '#000000',
                 // Data needs [ [date, num], [date2, num2 ], ... ]
                 data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.starts)] )
+            }]
+        });
+  },buildTripsChart(){
+      Highcharts.chart('tripsChart', {
+            title: {
+                text: 'Starts'
+            },
+            xAxis: {
+                type: 'datetime'
+            },
+            yAxis: {
+                title: {
+                    text: 'Trips'
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                area: {
+                    fillColor: {
+                        linearGradient: {
+                            x1: 0,
+                            y1: 0,
+                            x2: 0,
+                            y2: 1
+                        },
+                        stops: [
+                            [0, Highcharts.getOptions().colors[1]],
+                            [1, Highcharts.Color(Highcharts.getOptions().colors[1]).setOpacity(0).get('rgba')]
+                        ]
+                    },
+                    marker: {
+                        radius: 0.5,
+                        lineColor: '#6b3d41',
+                        fillColor: '#6b3d41'
+                    },
+                    lineColor: '#6b3d41',
+                    lineWidth: 1,
+                    enableMouseTracking: true,
+                    states: {
+                        hover: {
+                            lineColor: '#6b3d41',
+                            lineWidth: 1
+                        }
+                    },
+                    threshold: null
+                }
+            },
+            tooltip: {
+                backgroundColor: {
+                    linearGradient: [0, 0, 0, 60],
+                    stops: [
+                        [0, '#CCCCCC'],
+                        [1, '#E0E0E0']
+                    ]
+                },
+                borderWidth: 1,
+                borderColor: '#6b3d41'
+            },
+            series: [{
+                type: 'area',
+                lineColor: '#6b3d41',
+                color: '#6b3d41',
+                // Data needs [ [date, num], [date2, num2 ], ... ]
+                data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.trips)] )
             }]
         });
   },buildAvailabilityAndReliabilityChart(){
