@@ -91,12 +91,15 @@ var kpiApp = new Vue({
                 backgroundColor: {
                     linearGradient: [0, 0, 0, 60],
                     stops: [
-                        [0, '#444444'],
+                        [0, '#CCCCCC'],
                         [1, '#E0E0E0']
                     ]
                 },
-                borderWidth: 3,
-                borderColor: '#888888'
+                borderWidth: 1,
+                borderColor: '#888888',
+                text: {
+                    fillColor: '#682c32'
+                }
             },
             series: [{
                 type: 'area',
