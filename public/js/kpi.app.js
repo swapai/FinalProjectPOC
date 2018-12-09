@@ -48,6 +48,12 @@ var kpiApp = new Vue({
             },
             xAxis: {
                 type: 'datetime',
+                tooltip: {
+                    backgroundColor: '#FCFFC5',
+                    borderColor: 'black',
+                    borderRadius: 10,
+                    borderWidth: 3
+                }
             },
             yAxis: {
                 title: {
@@ -87,7 +93,6 @@ var kpiApp = new Vue({
                     threshold: null
                 }
             },
-
             series: [{
                 type: 'area',
                 name: 'Hours (Running Total)',
