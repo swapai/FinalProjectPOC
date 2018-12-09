@@ -163,7 +163,7 @@ var kpiApp = new Vue({
         type: 'line'
     },
     title: {
-        text: 'Sensor Heat Rate'
+        text: 'Engine Fuel Consumption'
     },
     xAxis: {
         type: 'datetime',
@@ -173,10 +173,13 @@ var kpiApp = new Vue({
             text: 'Heat Rate (kWh)'
         }
     },
+    legend: {
+        enabled: false
+    },
     plotOptions: {
         line: {
             dataLabels: {
-                enabled: true,
+                enabled: false,
             },
             enableMouseTracking: false,
             lineColor: '#000000',
