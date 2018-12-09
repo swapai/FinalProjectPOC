@@ -97,6 +97,11 @@ var kpiApp = new Vue({
                 },
                 borderWidth: 1,
                 borderColor: '#888888',
+                marker: {
+                    radius: 1,
+                    lineColor: '#000000',
+                    fillColor: '#682c32'
+                }
             },
             series: [{
                 type: 'area',
