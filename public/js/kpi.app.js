@@ -188,6 +188,8 @@ var kpiApp = new Vue({
     },
     series: [{
       name: 'Heat Rate (kWh)',
+      lineColor: '#000000',
+      color: '#000000',
       // Data needs [ [date, num], [date2, num2 ], ... ]
       data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.heatRate)] )
     }]
