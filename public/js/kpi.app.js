@@ -411,7 +411,7 @@ buildCompressorEfficiencyChart(){
                 label: {
                     connectorAllowed: true,
                 },
-                lineColor: '#682c32',
+                lineColor: '#000000',
                 lineWidth: 1,
                 enableMouseTracking: true,
             }
@@ -425,13 +425,13 @@ buildCompressorEfficiencyChart(){
                 ]
             },
             borderWidth: 1,
-            borderColor: '#682c32'
+            borderColor: '#000000'
         },
 
     series: [{
         name: 'Operational Efficiency (%)',
-        lineColor: '#682c32',
-        color: '#682c32',
+        lineColor: '#000000',
+        color: '#000000',
         // Data needs [ [date, num], [date2, num2 ], ... ]
         data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.compressorEfficiency)] )
     }],
