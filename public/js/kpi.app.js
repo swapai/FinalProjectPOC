@@ -96,13 +96,11 @@ var kpiApp = new Vue({
                     ]
                 },
                 borderWidth: 1,
-                borderColor: '#888888',
-                crosshairs: true,
-                shared: true
+                borderColor: '#888888'
             },
             series: [{
                 type: 'area',
-                name: 'Hours (Running Total)',
+                name: 'Power',
                 // Data needs [ [date, num], [date2, num2 ], ... ]
                 data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.output)] )
             }]
