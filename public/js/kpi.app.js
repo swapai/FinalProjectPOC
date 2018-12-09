@@ -47,13 +47,7 @@ var kpiApp = new Vue({
                 text: 'Engine Power'
             },
             xAxis: {
-                type: 'datetime',
-                tooltip: {
-                    backgroundColor: '#FCFFC5',
-                    borderColor: 'black',
-                    borderRadius: 10,
-                    borderWidth: 3
-                }
+                type: 'datetime'
             },
             yAxis: {
                 title: {
@@ -92,6 +86,17 @@ var kpiApp = new Vue({
                     },
                     threshold: null
                 }
+            },
+            tooltip: {
+                backgroundColor: {
+                    linearGradient: [0, 0, 0, 60],
+                    stops: [
+                        [0, '#444444'],
+                        [1, '#E0E0E0']
+                    ]
+                },
+                borderWidth: 3,
+                borderColor: '#888888'
             },
             series: [{
                 type: 'area',
