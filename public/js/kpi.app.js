@@ -97,9 +97,6 @@ var kpiApp = new Vue({
                 },
                 borderWidth: 1,
                 borderColor: '#888888',
-                text: {
-                    fillColor: '#682c32'
-                }
             },
             series: [{
                 type: 'area',
