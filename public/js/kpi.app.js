@@ -72,9 +72,9 @@ var kpiApp = new Vue({
                         ]
                     },
                     marker: {
-                        radius: 1,
+                        radius: 0.5,
                         lineColor: '#000000',
-                        fillColor: '#682c32'
+                        fillColor: '#000000'
                     },
                     lineColor: '#000000',
                     lineWidth: 1,
@@ -176,9 +176,11 @@ var kpiApp = new Vue({
     plotOptions: {
         line: {
             dataLabels: {
-                enabled: false
+                enabled: true,
             },
-            enableMouseTracking: false
+            enableMouseTracking: false,
+            lineColor: '#000000',
+            lineWidth: 1,
         }
     },
     series: [{
