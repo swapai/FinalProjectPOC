@@ -288,6 +288,8 @@ buildCompressorEfficiencyChart(){
 
     series: [{
         name: 'Operational Efficiency (%)',
+        lineColor: '#331a1c',
+        color: '#331a1c',
         // Data needs [ [date, num], [date2, num2 ], ... ]
         data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.compressorEfficiency)] )
     }],
