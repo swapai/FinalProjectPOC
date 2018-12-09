@@ -76,13 +76,6 @@ var serviceInformation = new Vue({
       // }
     ]
 },
-  computed: {
-    // a computed getter
-    b: function () {
-      // `this` points to the vm instance
-      return 100 - this.likelihoodOfFailureInFuture  
-    }
-  },
 methods: {
   gotoWebsiteNext(productNum) {
     if(productNum ==1){
