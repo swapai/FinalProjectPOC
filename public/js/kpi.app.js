@@ -253,6 +253,9 @@ buildCompressorEfficiencyChart(){
     title: {
         text: 'Operational Efficiency Chart'
     },
+    xAxis: {
+        type: 'datetime',
+    },
     yAxis: {
             title: {
                 text: 'Operational Efficiency (%)'
