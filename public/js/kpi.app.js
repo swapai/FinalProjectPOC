@@ -208,15 +208,15 @@ var kpiApp = new Vue({
                     },
                     marker: {
                         radius: 0.5,
-                        lineColor: '#6b3d41',
-                        fillColor: '#6b3d41'
+                        lineColor: '#000000',
+                        fillColor: '#000000'
                     },
-                    lineColor: '#6b3d41',
+                    lineColor: '#000000',
                     lineWidth: 1,
                     enableMouseTracking: true,
                     states: {
                         hover: {
-                            lineColor: '#6b3d41',
+                            lineColor: '#000000',
                             lineWidth: 1
                         }
                     },
@@ -232,12 +232,12 @@ var kpiApp = new Vue({
                     ]
                 },
                 borderWidth: 1,
-                borderColor: '#6b3d41'
+                borderColor: '#000000'
             },
             series: [{
                 type: 'area',
-                lineColor: '#6b3d41',
-                color: '#6b3d41',
+                lineColor: '#000000',
+                color: '#000000',
                 // Data needs [ [date, num], [date2, num2 ], ... ]
                 data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.trips)] )
             }]
