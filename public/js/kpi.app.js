@@ -101,6 +101,8 @@ var kpiApp = new Vue({
             series: [{
                 type: 'area',
                 name: 'Power',
+                lineColor: '#000000',
+                color: '#000000',
                 // Data needs [ [date, num], [date2, num2 ], ... ]
                 data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.output)] )
             }]
@@ -181,7 +183,7 @@ var kpiApp = new Vue({
             dataLabels: {
                 enabled: false,
             },
-            enableMouseTracking: false,
+            enableMouseTracking: true,
             lineColor: '#000000',
             lineWidth: 1,
         }
