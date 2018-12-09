@@ -48,7 +48,6 @@ var kpiApp = new Vue({
             },
             xAxis: {
                 type: 'datetime',
-                color: 'rgba(68, 170, 213, 0)'
             },
             yAxis: {
                 title: {
@@ -68,8 +67,8 @@ var kpiApp = new Vue({
                             y2: 1
                         },
                         stops: [
-                            [0, Highcharts.getOptions().colors[0]],
-                            [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                            [0, Highcharts.getOptions().colors[1]],
+                            [1, Highcharts.Color(Highcharts.getOptions().colors[1]).setOpacity(0).get('rgba')]
                         ]
                     },
                     marker: {
