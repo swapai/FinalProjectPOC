@@ -80,7 +80,7 @@ var serviceInformation = new Vue({
     // a computed getter
     b: function () {
       // `this` points to the vm instance
-      return 100 - this.likelihoodOfFailureInFuture
+      return 100 - this.likelihoodOfFailureInFuture  
     }
   },
 methods: {
