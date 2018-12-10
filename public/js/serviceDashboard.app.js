@@ -3,12 +3,14 @@ var serviceInformation = new Vue({
   data: {
     singleProduct: {
     },
+    productStatus:"",
     lastServiceDate: "",
     causeOfLastFailure: "",
     descriptionOfResolutionForLastFailure:"",
     downtimeInHoursForLastFailure: "",
     expectedDowntimeCurrent: "",
     criticalityOfIssue: 0,
+    productID:"",
     productList:[
       // {
       //   productNum:1,
@@ -119,6 +121,8 @@ methods: {
         this.downtimeInHoursForLastFailure = serviceInformation.singleProduct.downtimeInHoursForLastFailure;
         this.expectedDowntimeCurrent = serviceInformation.singleProduct.expectedDowntimeCurrent;
         this.criticalityOfIssue = serviceInformation.singleProduct.criticalityOfIssue;
+        this.productStatus = serviceInformation.singleProduct.productStatus;
+        this.productID = serviceInformation.singleProduct.productID;
         $("#myModal3").modal('show');
     })
     .catch(err => {
