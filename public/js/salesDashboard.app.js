@@ -1,6 +1,16 @@
 var salesInformation = new Vue({
   el: '#salesMain',
-  data: {
+  data: {singleProduct: {
+  },
+  productNum:0,
+    productName: "",
+    productID: "",
+    modelNumber: "",
+    productStatus: "",
+    adjustedLifeExpectancy: "",
+    orderNumber: "",
+    orderDate: "",
+    deliveryDate: "",
     productList:[
       // {
       //   productNum:1,
@@ -61,8 +71,27 @@ methods: {
     newwindow=window.open(url,'Order Details','height=300,width=300');
        if (window.focus) {newwindow.focus()}
        return false;
-  }
+  },getProductInformationFromId(productNum){
+    fetch('api/productList.php?productNum='+productNum)
+    .then(response => response.json())
+    .then(json => {
+        salesInformation.singleProduct = json;
+        this.orderDate = salesInformation.singleProduct[0].orderDate;
+        this.productName = salesInformation.singleProduct[0].productName;
+        this.productID = salesInformation.singleProduct[0].productID;
+        this.modelNumber = salesInformation.singleProduct[0].modelNumber;
+        this.deliveryDate = salesInformation.singleProduct[0].deliveryDate;
+        this.orderNumber = salesInformation.singleProduct[0].orderNumber;
+        this.productStatus = salesInformation.singleProduct[0].productStatus;
+        this.productID = salesInformation.singleProduct[0].productID;
+        $("#myModal2").modal('show');
+    })
+    .catch(err => {
+        console.log('Last action fetch error: ');
+        console.log(err);
+    })
 
+  }
 },
 
   created (){
