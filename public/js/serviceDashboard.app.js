@@ -1,24 +1,14 @@
 var serviceInformation = new Vue({
   el: '#serviceMain',
   data: {
-    singleProduct:{
-        productNum:0,
-        productName: "",
-        productID: "",
-        modelNumber: "",
-        productStatus: "",
-        adjustedLifeExpectancy: "",
-        orderNumber: "",
-        orderDate: "",
-        deliveryDate: "",
-        likelihoodOfFailureInFuture:"",
-        lastServiceDate: "",
-        causeOfLastFailure: "",
-        descriptionOfResolutionForLastFailure:"",
-        downtimeInHoursForLastFailure: "",
-        expectedDowntimeCurrent: "",
-        criticalityOfIssue: 0
+    singleProduct: {
     },
+    lastServiceDate: "",
+    causeOfLastFailure: "",
+    descriptionOfResolutionForLastFailure:"",
+    downtimeInHoursForLastFailure: "",
+    expectedDowntimeCurrent: "",
+    criticalityOfIssue: 0,
     productList:[
       // {
       //   productNum:1,
@@ -122,13 +112,20 @@ methods: {
     fetch('api/productList.php?productNum='+productNum)
     .then(response => response.json())
     .then(json => {
-        serviceInformation.singleProduct = json
+        serviceInformation.singleProduct = json;
+        this.lastServiceDate = serviceInformation.singleProduct.lastServiceDate;
+        this.causeOfLastFailure = serviceInformation.singleProduct.causeOfLastFailure;
+        this.descriptionOfResolutionForLastFailure = serviceInformation.singleProduct.descriptionOfResolutionForLastFailure;
+        this.downtimeInHoursForLastFailure = serviceInformation.singleProduct.downtimeInHoursForLastFailure;
+        this.expectedDowntimeCurrent = serviceInformation.singleProduct.expectedDowntimeCurrent;
+        this.criticalityOfIssue = serviceInformation.singleProduct.criticalityOfIssue;
+        $("#myModal3").modal('show');
     })
     .catch(err => {
         console.log('Last action fetch error: ');
         console.log(err);
     })
-    $("#myModal3").modal('show');
+
   }
 },
   created (){
