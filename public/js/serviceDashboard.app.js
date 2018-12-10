@@ -125,10 +125,11 @@ methods: {
         serviceInformation.singleProduct = json
     })
     .catch(err => {
-        console.log('Client Notes fetch error: ');
+        console.log('Last action fetch error: ');
         console.log(err);
     })
-  }        
+    $("#myModal3").modal('show');
+  }
 
 },
 
