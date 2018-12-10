@@ -115,14 +115,14 @@ methods: {
     .then(response => response.json())
     .then(json => {
         serviceInformation.singleProduct = json;
-        this.lastServiceDate = serviceInformation.singleProduct.lastServiceDate;
-        this.causeOfLastFailure = serviceInformation.singleProduct.causeOfLastFailure;
-        this.descriptionOfResolutionForLastFailure = serviceInformation.singleProduct.descriptionOfResolutionForLastFailure;
-        this.downtimeInHoursForLastFailure = serviceInformation.singleProduct.downtimeInHoursForLastFailure;
-        this.expectedDowntimeCurrent = serviceInformation.singleProduct.expectedDowntimeCurrent;
-        this.criticalityOfIssue = serviceInformation.singleProduct.criticalityOfIssue;
-        this.productStatus = serviceInformation.singleProduct.productStatus;
-        this.productID = serviceInformation.singleProduct.productID;
+        this.lastServiceDate = serviceInformation.singleProduct[0].lastServiceDate;
+        this.causeOfLastFailure = serviceInformation.singleProduct[0].causeOfLastFailure;
+        this.descriptionOfResolutionForLastFailure = serviceInformation.singleProduct[0].descriptionOfResolutionForLastFailure;
+        this.downtimeInHoursForLastFailure = serviceInformation.singleProduct[0].downtimeInHoursForLastFailure;
+        this.expectedDowntimeCurrent = serviceInformation.singleProduct[0].expectedDowntimeCurrent;
+        this.criticalityOfIssue = serviceInformation.singleProduct[0].criticalityOfIssue;
+        this.productStatus = serviceInformation.singleProduct[0].productStatus;
+        this.productID = serviceInformation.singleProduct[0].productID;
         $("#myModal3").modal('show');
     })
     .catch(err => {
