@@ -130,10 +130,7 @@ methods: {
     })
     $("#myModal3").modal('show');
   }
-
 },
-
-
   created (){
 
     // const url = new URL(window.location.href);
