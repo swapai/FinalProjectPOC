@@ -119,13 +119,17 @@ methods: {
     $('#buttonGreen').hide();
   },
   getProductInformationFromId(productNum){
-    list = this.productList;
-    for(i=0; i<list.length; i++){
-      if(list[i].productNum == productNum){
-        this.singleProduct = list[i].productNum;
-      }
-    }
-  }
+    fetch('api/productList.php?productNum='+productNum)
+    .then(response => response.json())
+    .then(json => {
+        serviceInformation.singleProduct = json
+    })
+    .catch(err => {
+        console.log('Client Notes fetch error: ');
+        console.log(err);
+    })
+  }        
+
 },
 
 

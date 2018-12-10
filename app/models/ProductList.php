@@ -57,4 +57,26 @@ class ProductList
       }
       return $arr;
       }
+
+      public static function fetchByProductNum(int $productNum) {
+        // 1. Connect to the database
+        $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+
+        // 2. Prepare the query
+        $sql = 'SELECT * FROM productList WHERE productNum = ?';
+        $statement = $db->prepare($sql);
+
+        // 3. Run the query
+        $success = $statement->execute(
+                [$productNum]
+            );
+
+        // 4. Handle the results
+        $arr = [];
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+          $theProduct =  new ProductList($row);
+          array_push($arr, $theProduct);
+        }
+        return $arr;
+        }
   }

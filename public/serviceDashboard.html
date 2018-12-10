@@ -83,19 +83,19 @@
                 </div>
             </span>
             <span v-if="p.criticalityOfIssue === 2">
-                <button id="buttonYellow" class="btn btn-primary clientbutton" data-toggle="modal" data-target="#myModalYellow" @click="disableYellowButton()" role="button">Send parts for replacement</button>
+                <button id="buttonYellow" class="btn btn-primary clientbutton" data-toggle="modal" data-target="#myModalYellow" @click="disableYellowButton()" role="button">Part replacement needed</button>
                 <div>
                   <div id="myModalYellow" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-lg">
                       <!-- Modal content-->
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h4 class="modal-title">Parts Request Sent!</h4>
+                          <h4 class="modal-title">Part Order Notification Sent!</h4>
                           <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
                           <p>
-                              Request for delivery of parts sent!
+                              Request for order and delivery of engine filter (#Filt87551) has been sent to the customer and distributor!
                           </p>
                         </div>
                         <div class="modal-footer">
