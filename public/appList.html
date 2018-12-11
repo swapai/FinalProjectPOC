@@ -50,7 +50,7 @@
         <p class="card-text">{{a.appDescription}}</p>
         <p>
           <!-- <button id="clientbutton" class="btn btn-primary" @click="gotoSite(c.clientId)" role="button">Client Sites</button> -->
-          <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNext()" role="button">Launch</button>
+          <button id="button" class="btn btn-primary clientbutton" @click="gotoWebsiteNext(a.appNum)" role="button">Launch</button>
         </p>
         <span class="badge" v-if="appNumberNotifiction == 2 && appNumberNotifiction == a.appNum">3</span>
         <span v-if="1 == a.appNum"><img class="badgeImage" src = "images/sales.jpg"/></span>

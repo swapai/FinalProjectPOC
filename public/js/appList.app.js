@@ -39,8 +39,10 @@ var listOfApps = new Vue({
 
 
 methods: {
-  gotoWebsiteNext() {
+  gotoWebsiteNext(appNum) {
+    if(appNum == 1 || appNum == 2){
       window.location = 'clientList.html'+'?appNumber='+this.appNumberNotifiction;
+    }      
   }
 },
 
