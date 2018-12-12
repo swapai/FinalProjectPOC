@@ -56,7 +56,7 @@
                 <h5 class="card-subtitle mb-2 text-muted"><u>Model Number:</u> {{p.modelNumber}}</h5>
                 <h5 class="card-subtitle mb-2 text-muted"><u>Expected downtime (hours):</u> {{p.expectedDowntimeCurrent}}</h5>
                 <h5 class="card-subtitle mb-2 text-muted"><u>Likelihood Of Failure:</u> {{p.likelihoodOfFailureInFuture}}%</h5>
-                <h5 class="card-subtitle mb-2 text-muted"><u>Current Status:</u> <strong class="increasedSize">{{p.productStatus}}</strong></h5>
+                <h5 class="card-subtitle mb-2 text-muted"><u>Current Status:</u> <strong class="increasedSize">In Operation</strong></h5>
             <span v-if="p.criticalityOfIssue === 3">
                 <button id="buttonRed" class="btn btn-primary clientbutton"  data-toggle="modal" data-target="#myModalRed" @click="disableRedButton()" role="button">Request assistance</button>
                 <div>
@@ -185,7 +185,7 @@
                             </tr>
                             <tr>
                               <td>Product Status</td>
-                              <td>{{productStatus}}</td>
+                              <td>In Operation</td>
                             </tr>
                           </tbody>
                         </table>
